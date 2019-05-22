@@ -182,6 +182,9 @@ export async function getContractAddresses(graphqlHttpProvider: string, subgraph
   const httpLink = new HttpLink({
     credentials: 'same-origin',
     fetch,
+    // fetchOptions: {
+    //   mode: 'no-cors'
+    // },
     uri: graphqlHttpProvider
   })
 
